@@ -21,14 +21,14 @@ def save_fact_data(data_path, table, columns):
         print(df.head())
         conn.close()
 
-    # with engine.connect() as conn:
-    #     df.to_sql(table, conn, if_exists="append", index=False)
+    with engine.connect() as conn:
+        df.to_sql(table, conn, if_exists="append", index=False)
 
 print("chargement de la table vente-------------------")
 save_fact_data('./Data/ventes.csv', 'vente', ["venteID", "productID", "clientID", "salesDate", "salesVolume", "salesAmount", "locationID"])
 print("chargement de la table fabrication-------------------")
 save_fact_data('./Data/fabrication.csv', 'fabrication', ["fabricationID",	"productID", "usineID",	"MPID",	"dateProduction", "quantiteProduite", "quantiteConditionnee", "ecartFabrication", "ecartConditionnement", "quantiteMP"])
 print("chargement de la table retour-------------------")
-save_fact_data('./Data/retours.csv', 'retour', ["retourid", "productid", "usineid", "dateretour", "quantiteretournée"])
+save_fact_data('./Data/retours.csv', 'retour', ["retourid", "productid", "usineid", "dateretour", "quantiteretournee"])
 print("chargement de la table distribution-------------------")
 save_fact_data('./Data/distribution.csv', 'distribution', ["distributionID", "productID",	"clientID",	"distributionDate",	"quantity",	"locationID"])
