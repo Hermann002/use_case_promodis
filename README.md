@@ -1,1 +1,2 @@
 # use_case_promodis
+dashboard https://app.powerbi.com/view?r=eyJrIjoiODFiNDgwOWQtY2E2NC00YTViLWE4ZWUtNTVjZWFjZTViNTRjIiwidCI6IjEyZjI5NzFlLWNhYzUtNDdhNC04ZDY4LWYxYjIyMDQyZjgzZSIsImMiOjl9
